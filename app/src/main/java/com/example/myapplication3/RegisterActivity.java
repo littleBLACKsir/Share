@@ -53,8 +53,9 @@ public class RegisterActivity extends BaseActivity {
                 String pwd2 = et_Pwd2.getText().toString();
                 if (pwd1.equals(pwd2)) {
                     Register(et_Account.getText().toString().trim(), et_Pwd.getText().toString().trim(), et_Pwd2.getText().toString().trim());
+                    ShowToast("注册成功！");
                 } else
-                    ShowToast("密码不一致！");
+                    ShowToast("两次密码不一致！");
             }
         });
     }
