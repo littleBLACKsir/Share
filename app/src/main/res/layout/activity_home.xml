@@ -8,6 +8,7 @@
     android:orientation="vertical"
     android:background="#ffffff"
     tools:context=".HomeActivity">
+    //0dp-66dp通过权重为1来设置填满
     <com.example.myapplication3.view.FixedViewPager
         android:id="@+id/viewpager"
         android:layout_width="match_parent"
@@ -20,6 +21,7 @@
         android:layout_height="1dp"
         android:background="@color/divider">
     </View>
+    //固定66dp
     <com.flyco.tablayout.CommonTabLayout
         android:id="@+id/commonTabLayout"
         android:layout_width="match_parent"

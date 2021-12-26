@@ -1,7 +1,7 @@
 package com.example.myapplication3.entity;
 
 import com.flyco.tablayout.listener.CustomTabEntity;
-
+//开源项目中的
 public class TabEntity implements CustomTabEntity {
     public String title;
     public int selectedIcon;

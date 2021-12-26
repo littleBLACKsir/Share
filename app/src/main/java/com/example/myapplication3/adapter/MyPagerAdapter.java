@@ -11,6 +11,7 @@ public class MyPagerAdapter extends FragmentPagerAdapter {
     private String[] mTitles;
     private ArrayList<Fragment> mFragments;
 
+    //通过适配器传进来
     public MyPagerAdapter(FragmentManager fm, String[] titles, ArrayList<Fragment> fragments) {
         super(fm);
         this.mTitles = titles;

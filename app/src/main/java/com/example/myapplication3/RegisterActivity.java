@@ -35,10 +35,13 @@ public class RegisterActivity extends BaseActivity {
 
     @Override
     protected void initView() {
-        bt_Register=findViewById(R.id.bt_log);
-        et_Account=findViewById(R.id.et_account);
-        et_Pwd=findViewById(R.id.et_pwd);
-        et_Pwd2=findViewById(R.id.et_pwd2);
+        bt_Register = findViewById(R.id.bt_log);
+        et_Account = findViewById(R.id.et_account);
+        et_Pwd = findViewById(R.id.et_pwd);
+        et_Pwd2 = findViewById(R.id.et_pwd2);
+        String pwd1 = et_Pwd.getText().toString();
+        String pwd2 = et_Pwd2.getText().toString();
+
     }
 
     @Override
@@ -46,7 +49,12 @@ public class RegisterActivity extends BaseActivity {
         bt_Register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Register(et_Account.getText().toString().trim(),et_Pwd.getText().toString().trim(),et_Pwd2.getText().toString().trim());
+                String pwd1 = et_Pwd.getText().toString();
+                String pwd2 = et_Pwd2.getText().toString();
+                if (pwd1.equals(pwd2)) {
+                    Register(et_Account.getText().toString().trim(), et_Pwd.getText().toString().trim(), et_Pwd2.getText().toString().trim());
+                } else
+                    ShowToast("两次密码不一致！");
             }
         });
     }

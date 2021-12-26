@@ -30,7 +30,7 @@ public class VideoAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
     public VideoAdapter(Context context) {
         this.mContext = context;
     }
-
+    //构造器接收图片的集合
     public VideoAdapter(Context context, List<PictureEntity> datas) {
         this.datas = datas;
         this.mContext = context;
