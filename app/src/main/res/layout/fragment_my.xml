@@ -212,7 +212,7 @@
                     android:layout_width="28dp"
                     android:layout_height="28dp"
                     android:layout_centerVertical="true"
-                    android:src="@mipmap/icon_skin" />
+                    android:src="@drawable/icon_upload" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -251,7 +251,7 @@
                     android:layout_width="28dp"
                     android:layout_height="28dp"
                     android:layout_centerVertical="true"
-                    android:src="@mipmap/icon_skin" />
+                    android:src="@drawable/icon_out" />
 
                 <TextView
                     android:layout_width="wrap_content"

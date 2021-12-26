@@ -6,11 +6,16 @@
         <entry key="..\:/MyApplication3/app/src/main/res/drawable/bt_login.xml" value="0.18177083333333333" />
         <entry key="..\:/MyApplication3/app/src/main/res/drawable/bt_register.xml" value="0.18177083333333333" />
         <entry key="..\:/MyApplication3/app/src/main/res/drawable/ic_launcher_background.xml" value="0.18177083333333333" />
+        <entry key="..\:/MyApplication3/app/src/main/res/drawable/icon_out.xml" value="0.265625" />
+        <entry key="..\:/MyApplication3/app/src/main/res/drawable/icon_upload.xml" value="0.26979166666666665" />
         <entry key="..\:/MyApplication3/app/src/main/res/drawable/login_frame.xml" value="0.18177083333333333" />
         <entry key="..\:/MyApplication3/app/src/main/res/drawable/shape_album.xml" value="0.18177083333333333" />
         <entry key="..\:/MyApplication3/app/src/main/res/drawable/shape_big_login_btn.xml" value="0.18177083333333333" />
         <entry key="..\:/MyApplication3/app/src/main/res/drawable/shape_big_register_btn.xml" value="0.18177083333333333" />
         <entry key="..\:/MyApplication3/app/src/main/res/drawable/shape_login_btn.xml" value="0.18177083333333333" />
+        <entry key="..\:/MyApplication3/app/src/main/res/drawable/shape_my_info_bg.xml" value="0.1859375" />
+        <entry key="..\:/MyApplication3/app/src/main/res/drawable/shape_my_logout_bg.xml" value="0.1859375" />
+        <entry key="..\:/MyApplication3/app/src/main/res/drawable/shape_register_btn.xml" value="0.1859375" />
         <entry key="..\:/MyApplication3/app/src/main/res/drawable/shape_search_box.xml" value="0.24635416666666668" />
         <entry key="..\:/MyApplication3/app/src/main/res/layout/activity_home.xml" value="0.25052083333333336" />
         <entry key="..\:/MyApplication3/app/src/main/res/layout/activity_login.xml" value="0.264" />

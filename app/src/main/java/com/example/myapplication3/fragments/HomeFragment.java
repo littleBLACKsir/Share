@@ -37,7 +37,7 @@ import okhttp3.Request;
 import okhttp3.Response;
 
 
-public class HomeFragment extends BaseFragment {
+public class HomeFragment extends BaseFragment implements VideoAdapter.GiveLikeCallback {
     private RecyclerView recyclerView;
     private RefreshLayout refreshLayout;
     private VideoAdapter newsAdapter;
@@ -104,7 +104,7 @@ public class HomeFragment extends BaseFragment {
                 .add("token",token)
                 .build();
         final Request request = new Request.Builder()
-                .url("http://119.29.120.150:6183//allpicturesbypage")//请求的url
+                .url("http://123.56.83.121:8080/allpicturesbypage")//请求的url
                 .post(formBody)
                 .build();
         Call call = okHttpClient.newCall(request);
@@ -157,8 +157,13 @@ public class HomeFragment extends BaseFragment {
                             }
                         }
                     });
-                }
+            }
 
         });
+    }
+
+    @Override
+    public void callback(PictureEntity data) {
+
     }
 }

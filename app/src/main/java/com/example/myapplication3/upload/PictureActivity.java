@@ -320,7 +320,7 @@ public class PictureActivity extends AppCompatActivity implements View.OnClickLi
                                     .build();
                             OkHttpClient okHttpClient=new OkHttpClient.Builder().build();
                             final Request request = new Request.Builder()
-                                    .url("http://119.29.120.150:6183/upload")//请求的url
+                                    .url("http://123.56.83.121:8081/upload")//请求的url
                                     .post(multipartBody)
                                     .build();
                             Call call = okHttpClient.newCall(request);

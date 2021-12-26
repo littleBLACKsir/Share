@@ -70,7 +70,7 @@ public class LoginActivity extends BaseActivity {
                 .add("password", psw)
                 .build();
         final Request request = new Request.Builder()
-                .url("http://119.29.120.150:6183/login")//请求的url
+                .url("http://123.56.83.121:8080/login")//请求的url
                 .post(formBody)
                 .build();
         Call call = okHttpClient.newCall(request);

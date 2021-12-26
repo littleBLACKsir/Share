@@ -22,6 +22,7 @@ import java.util.List;
 public class VideoAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     private Context mContext;
     private List<PictureEntity> datas;
+    private GiveLikeCallback callback;
 
     public void setDatas(List<PictureEntity> datas) {
         this.datas = datas;
@@ -87,8 +88,22 @@ public class VideoAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
             tvComment = view.findViewById(R.id.comment);
             img_header = view.findViewById(R.id.img_header);
             Cover = view.findViewById(R.id.img_cover);
+
+            tvDz.setOnClickListener(view1 -> {
+                if (null != callback) {
+                    callback.callback(datas.get(getAdapterPosition()));
+                }
+            });
         }
 
+    }
+
+    public interface GiveLikeCallback {
+        void callback(PictureEntity data);
+    }
+
+    public void setGiveLikeCallback(GiveLikeCallback callback) {
+        this.callback = callback;
     }
 }
 
