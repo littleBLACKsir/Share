@@ -4,35 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@mipmap/login_start"
+    android:background="@drawable/cover3"
     tools:context=".MainActivity">
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:paddingLeft="44dp"
-        android:paddingRight="44dp"
-        android:layout_marginBottom="90dp"
-        >
 
-        <Button
-            android:id="@+id/bt_login"
-            android:layout_width="100dp"
-            android:layout_height="40dp"
-            android:layout_alignParentLeft="true"
-            android:background="@drawable/bt_login"
-            android:text="@string/login"
-            android:textColor="#ffffff"
-            android:textSize="20sp"></Button>
-        <Button
-            android:id="@+id/bt_register"
-            android:layout_alignParentRight="true"
-            android:layout_width="100dp"
-            android:layout_height="40dp"
-            android:text="@string/register"
-            android:background="@drawable/bt_register"
-            android:textColor="#ffffff"
-            android:textSize="20sp">
-        </Button>
-    </RelativeLayout>
+    <TextView
+        android:id="@+id/main_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="1"
+        android:layout_marginTop="250dp"
+        android:layout_marginLeft="330dp"
+        android:text="图片分享"
+        android:textColor="@color/teal_200"
+        android:textSize="50sp"
+        android:textStyle="bold" />
+
 </RelativeLayout>

@@ -1,20 +1,12 @@
 package com.example.myapplication3.fragments;
 
 import android.content.Intent;
-import android.os.Bundle;
 
-import androidx.fragment.app.Fragment;
-
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.example.myapplication3.LoginActivity;
-import com.example.myapplication3.MainActivity;
 import com.example.myapplication3.R;
 import com.example.myapplication3.upload.PictureActivity;
 

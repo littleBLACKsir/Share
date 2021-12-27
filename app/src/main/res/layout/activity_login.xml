@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="329dp"
         android:scaleType="fitXY"
-        android:src="@mipmap/login_start_test1"></ImageView>
+        android:src="@mipmap/login_cover1"></ImageView>
     //卡片效果
     <LinearLayout
 
@@ -81,8 +81,6 @@
                     android:layout_marginLeft="20dp"
                     android:background="@null"
                     android:hint="@string/psw_hint"
-
-
                     android:inputType="textPassword"
                     android:textColor="#000000"
                     android:textColorHint="#bcbcbc"
@@ -95,10 +93,22 @@
             android:layout_width="match_parent"
             android:layout_height="55dp"
             android:layout_marginLeft="18dp"
-            android:layout_marginTop="67dp"
+            android:layout_marginTop="33dp"
             android:layout_marginRight="18dp"
             android:background="@drawable/shape_big_login_btn"
             android:text="@string/login"
+            android:textColor="@color/black"
+            android:textSize="24dp"></Button>
+
+        <Button
+            android:id="@+id/bt_register"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginLeft="18dp"
+            android:layout_marginTop="33dp"
+            android:layout_marginRight="18dp"
+            android:background="@drawable/shape_big_login_btn"
+            android:text="@string/register"
             android:textColor="@color/black"
             android:textSize="24dp"></Button>
     </LinearLayout>

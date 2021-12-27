@@ -1,7 +1,6 @@
 package com.example.myapplication3;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
@@ -10,19 +9,15 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Build;
-import android.os.Bundle;
+import android.os.Handler;
 import android.provider.Settings;
-import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.example.myapplication3.Utils.StringUtils;
-import com.example.myapplication3.fragments.MyFragment;
-import com.example.myapplication3.upload.PictureActivity;
-import com.mylhyl.acp.Acp;
-import com.mylhyl.acp.AcpListener;
-import com.mylhyl.acp.AcpOptions;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -31,6 +26,7 @@ public class MainActivity extends BaseActivity {
 
     private Button bt_Login;
     private Button bt_Register;
+    private TextView mainText;
     String[] permissions = new String[]{
             Manifest.permission.CAMERA,
             Manifest.permission.WRITE_EXTERNAL_STORAGE,
@@ -46,6 +42,8 @@ public class MainActivity extends BaseActivity {
         //6.0才用动态权限
 
     }
+
+
     //检查权限
     private void checkPermission() {
         List<String> permissionList = new ArrayList<>();
@@ -119,33 +117,28 @@ public class MainActivity extends BaseActivity {
         if (Build.VERSION.SDK_INT >= 23) {
             checkPermission();
         }
-        bt_Login=findViewById(R.id.bt_login);
-        bt_Register=findViewById(R.id.bt_register);
+
+        mainText = findViewById(R.id.main_text);
+        Typeface fontFace = Typeface.createFromAsset(getAssets(),
+                "hkww.ttf");
+        mainText.setTypeface(fontFace);
+
     }
 
     @Override
     //绑定事件
     protected void initData() {
-
-        String token=GetStringFromSP("token");
-        if(!StringUtils.IsEmpty(token))
-        {
-            navgateTo(HomeActivity.class);
-            finish();
-        }
-        bt_Login.setOnClickListener(new View.OnClickListener() {
+        String token = GetStringFromSP("token");
+        Integer time = 2000;
+        Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
             @Override
-            public void onClick(View view) {
+            public void run() {
                 navgateTo(LoginActivity.class);
-               }
+                finish();
             }
-        );
-        bt_Register.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                navgateTo(RegisterActivity.class);
-            }
-        }
-        );
+        }, time);
+
+
     }
 }

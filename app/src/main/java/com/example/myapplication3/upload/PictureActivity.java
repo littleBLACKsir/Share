@@ -16,10 +16,9 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
 import android.provider.Settings;
+import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
@@ -27,10 +26,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
-import com.example.myapplication3.HomeActivity;
 import com.example.myapplication3.R;
 import com.example.myapplication3.entity.LoginResponse;
-import com.example.myapplication3.fragments.MyFragment;
 import com.google.gson.Gson;
 
 import java.io.BufferedReader;
@@ -309,6 +306,7 @@ public class PictureActivity extends AppCompatActivity implements View.OnClickLi
 
                         //上传图片（Android 4.0 之后不能在主线程中请求HTTP请求）
                         File file = new File(photoPath);
+                        Log.d("Test", "path---->" + file.getPath());
                         if (file.exists()) {
 
                             final RequestBody requestBody= RequestBody.create(MediaType.parse("image/jpg"),file);
@@ -320,7 +318,7 @@ public class PictureActivity extends AppCompatActivity implements View.OnClickLi
                                     .build();
                             OkHttpClient okHttpClient=new OkHttpClient.Builder().build();
                             final Request request = new Request.Builder()
-                                    .url("http://123.56.83.121:8081/upload")//请求的url
+                                    .url("http://123.56.83.121:8080/upload")//请求的url
                                     .post(multipartBody)
                                     .build();
                             Call call = okHttpClient.newCall(request);
@@ -330,6 +328,7 @@ public class PictureActivity extends AppCompatActivity implements View.OnClickLi
                                 @Override
                                 public void onFailure(Call call, IOException e) {
                                     System.out.println("连接失败");
+                                    Log.d("Test", "call----->" + e.toString());
                                 }
 
                                 @Override

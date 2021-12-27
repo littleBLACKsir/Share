@@ -41,7 +41,7 @@ public class PathHelper {
      * @return 如果Uri对应的图片存在, 那么返回该图片的绝对路径, 否则返回null
      */
     @SuppressLint("NewApi")
-    private static String getRealPathFromUriAboveApi19(Context context, Uri uri) {
+    public static String getRealPathFromUriAboveApi19(Context context, Uri uri) {
         String filePath = null;
         if (DocumentsContract.isDocumentUri(context, uri)) {
             // 如果是document类型的 uri, 则通过document id来进行处理

@@ -37,7 +37,10 @@
         </activity>
         <activity
             android:name=".LoginActivity"
-            android:exported="true" />
+            android:exported="true"
+            android:theme="@style/LaunchTheme">
+
+        </activity>
         <activity
             android:name=".upload.PictureActivity"
             android:exported="true" />

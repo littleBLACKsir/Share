@@ -24,6 +24,7 @@ import okhttp3.Response;
 
 public class LoginActivity extends BaseActivity {
     private Button bt_Login;
+    private Button bt_register;
     private EditText et_Account;
     private EditText et_Pwd;
 
@@ -36,7 +37,8 @@ public class LoginActivity extends BaseActivity {
     protected void initView() {
         bt_Login=findViewById(R.id.bt_log);
         et_Account=findViewById(R.id.et_account);
-        et_Pwd=findViewById(R.id.et_pwd);
+        et_Pwd = findViewById(R.id.et_pwd);
+        bt_register = findViewById(R.id.bt_register);
     }
 
     @Override
@@ -44,8 +46,12 @@ public class LoginActivity extends BaseActivity {
         bt_Login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Login(et_Account.getText().toString().trim(),et_Pwd.getText().toString().trim());
+                Login(et_Account.getText().toString().trim(), et_Pwd.getText().toString().trim());
             }
+        });
+
+        bt_register.setOnClickListener(view -> {
+            navgateTo(RegisterActivity.class);
         });
     }
 
